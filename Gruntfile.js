@@ -2,12 +2,12 @@ module.exports = function(grunt){
   
   grunt.initConfig({
     browserify: {
-      'dist/bundle.js': ['javascripts/main.js']
+      'dist/bundle.js': ['javascripts/**/*.js']
     },
     jshint: {
       files: ['javascripts/**/*.js'],
     options: {
-      predef: ['document', 'console'],
+      predef: ['document', 'console', '$'],
       esnext: true,
       globalstrict: true,
       globals: {
